@@ -4,30 +4,68 @@ html {
 }
 
 body {
-    background-color: #C0E5C8;
+    background-color: #1B1725;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Calculator portion */
+
 .calculator {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 450px;
     height: 700px;
-    border: 1px solid black;
+    border: 2px solid #EDE7E3;
     align-items: center;
-}
-
-.buttons {
 }
 
 .display{
     margin: 30px;
     height: 150px;
-    width: 400px;
+    width: 380px;
     border-radius: 3px;
-    border: 1px solid black;
+    border: 1px solid #EDE7E3;
+    background-color: #EDE7E3;
     
 }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    width: 500px;
+}
+
+button {
+    border: none;
+    background-color: #EDE7E3
+}
+
+.bigButtons button{
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+#clear {
+    background-color: #47A8BD;
+}
+
+#delete {
+    background-color: #C5283D;
+}
+
+.smallButtons button {
+    width: 80px;
+    height: 75px;
+    font-size: 30px;
+    margin: 8px;
+}
+
