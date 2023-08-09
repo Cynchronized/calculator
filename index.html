@@ -10,38 +10,38 @@
 <body>
     <div class="calculator">
         <div class="display">
-            <div class="displaySelections">0</div>
-            <div class="displayResult">1</div>
+            <div data-equation class="equation"></div>
+            <div data-result class="result">0</div>
         </div>
         <buttons class="buttons">
             <div class="bigButtons">
-                <button id="clear">CLEAR</button>
-                <button id="delete">DELETE</button>
+                <button data-clear id="clear">CLEAR</button>
+                <button data-delete id="delete">DELETE</button>
             </div>
             <div class="smallButtons">
                 <div>
-                 <button class="selection" data-selection="7">7</button>
-                 <button class="selection" data-selection="8">8</button>
-                 <button class="selection" data-selection="9">9</button>
-                 <button class="selection" data-selection="divide">÷</button>
+                 <button data-number>7</button>
+                 <button data-number>8</button>
+                 <button data-number>9</button>
+                 <button data-operator>÷</button>
                 </div>
                 <div>
-                 <button class="selection" data-selection="4">4</button>
-                 <button class="selection" data-selection="5">5</button>
-                 <button class="selection" data-selection="6">6</button>
-                 <button class="selection" data-selection="multiply">x</button>
+                 <button data-number>4</button>
+                 <button data-number>5</button>
+                 <button data-number>6</button>
+                 <button data-operator>x</button>
                 </div>
                 <div>
-                 <button class="selection" data-selection="1">1</button>
-                 <button class="selection" data-selection="2">2</button>
-                 <button class="selection" data-selection="3">3</button>
-                 <button class="selection" data-selection="subtract">-</button>
+                 <button data-number>1</button>
+                 <button data-number>2</button>
+                 <button data-number>3</button>
+                 <button data-operator>-</button>
                 </div>
                 <div>
-                    <button class="selection" data-selection="decimal">.</button>
-                    <button class="selection" data-selection="0">0</button>
-                    <button class="selection" data-selection="equal">=</button>
-                    <button class="selection" data-selection="addition">+</button>
+                    <button data-number>.</button>
+                    <button data-number>0</button>
+                    <button data-equals>=</button>
+                    <button data-operator>+</button>
                 </div>
             <div>
         </buttons>

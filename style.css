@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Calculator portion */
@@ -27,25 +28,28 @@ body {
 .display{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 50px;
+    justify-content: space-around;
     align-items: flex-end;
+    gap: 50px;
     margin: 30px;
     height: 150px;
     width: 380px;
     border-radius: 3px;
     border: 1px solid #EDE7E3;
     background-color: #EDE7E3;
+    word-wrap: break-word;
+    word-break: break-all;
 
 }
 
-.displaySelections {
-    font-size: 35px;
+.equation {
+    opacity: .8;
+    font-size: 1.5rem;
     margin-right: 25px;
 }
 
-.displayResult {
-    font-size: 55px;
+.result {
+    font-size: 2.5rem;
     margin-right: 20px;
 }
 
@@ -62,7 +66,12 @@ body {
 
 button {
     border: none;
-    background-color: #EDE7E3
+    background-color: #EDE7E3;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
 }
 
 .bigButtons button{
