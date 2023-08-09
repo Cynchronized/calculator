@@ -22,15 +22,34 @@ body {
     align-items: center;
 }
 
+/* Display */
+
 .display{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 50px;
+    align-items: flex-end;
     margin: 30px;
     height: 150px;
     width: 380px;
     border-radius: 3px;
     border: 1px solid #EDE7E3;
     background-color: #EDE7E3;
-    
+
 }
+
+.displaySelections {
+    font-size: 35px;
+    margin-right: 25px;
+}
+
+.displayResult {
+    font-size: 55px;
+    margin-right: 20px;
+}
+
+/* Buttons */
 
 .buttons {
     display: flex;
