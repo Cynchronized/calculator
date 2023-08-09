@@ -36,8 +36,6 @@ const appendNumber = function(number) {
 }
 
 const chooseOperation = function(operation) {
-    firstOperand = resultTextElement.textContent
-    if(secondOperand !== '') compute
     if(firstOperand === '') return
     operator = operation
     equationTextElement.textContent = `${firstOperand} ${operator}`
