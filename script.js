@@ -24,7 +24,7 @@ const resetValues = function () {
 }
 
 const deleteNumber = function() {
-
+    resultTextElement.textContent = resultTextElement.textContent.toString().slice(0, -1)
 }
 
 const appendNumber = function(number) {
@@ -36,6 +36,7 @@ const appendNumber = function(number) {
 }
 
 const chooseOperation = function(operation) {
+    firstOperand = resultTextElement.textContent
     if(firstOperand === '') return
     operator = operation
     equationTextElement.textContent = `${firstOperand} ${operator}`
@@ -87,6 +88,8 @@ const operate = function() {
 clearAllButton.addEventListener('click', clear)
 
 equalsButton.addEventListener('click', operate)
+
+deleteButton.addEventListener('click', deleteNumber)
 
 operationButtons.forEach((button) =>
     button.addEventListener('click', () => {
