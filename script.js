@@ -1,6 +1,7 @@
 let firstOperand = ''
 let secondOperand = ''
 let operator = undefined
+let result
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operator]')
@@ -14,7 +15,7 @@ const resultTextElement = document.querySelector('[data-result]')
 const clear = function () {
     equationTextElement.textContent = ''
     resultTextElement.textContent = 0
-    resetValues
+    resetValues()
 }
 
 const resetValues = function () {
@@ -59,10 +60,10 @@ const multiply = (a, b) => a * b
 const divide = (a, b) => a / b
 
 const operate = function() {
-    let result
     secondOperand = resultTextElement.textContent
     const a = parseFloat(firstOperand)
     const b = parseFloat(secondOperand)
+    if(isNaN(a) || isNaN(b)) return
     switch(operator) {
         case '+':
             result = add(a, b)
@@ -80,7 +81,7 @@ const operate = function() {
     }
     resultTextElement.textContent = result
     equationTextElement.textContent = `${firstOperand} ${operator} ${secondOperand}`
-    resetValues
+    resetValues()
 }
 
 clearAllButton.addEventListener('click', clear)
