@@ -36,8 +36,9 @@ const appendNumber = function(number) {
 }
 
 const chooseOperation = function(operation) {
+    if(resultTextElement.textContent === '') return
+    if(operator !== undefined) operate()
     firstOperand = resultTextElement.textContent
-    if(firstOperand === '') return
     operator = operation
     equationTextElement.textContent = `${firstOperand} ${operator}`
     resultTextElement.textContent = ""
@@ -45,8 +46,8 @@ const chooseOperation = function(operation) {
 
 const resetDisplay = function() {
     resultTextElement.textContent = ''
-
 }
+
 
 // Basic math operators
 const add = (a, b) => a + b
@@ -62,11 +63,6 @@ const operate = function() {
     secondOperand = resultTextElement.textContent
     const a = parseFloat(firstOperand)
     const b = parseFloat(secondOperand)
-            console.log('hello')
-
-    console.log(a)
-    console.log(b)
-
     switch(operator) {
         case '+':
             result = add(a, b)
@@ -79,6 +75,8 @@ const operate = function() {
             break
         case "÷":
             result = divide(a, b)
+            if (b === 0) alert("Can not divide by 0!")
+            break
     }
     resultTextElement.textContent = result
     equationTextElement.textContent = `${firstOperand} ${operator} ${secondOperand}`
